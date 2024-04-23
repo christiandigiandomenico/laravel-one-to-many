@@ -40,7 +40,7 @@ Route::middleware(['auth', 'verified'])
         function () {
 
             Route::get('/', [DashboardController::class, 'index'])->name('index');
-            Route::resource('/projects', ProjectController::class);
+            Route::resource('projects', ProjectController::class);
             Route::resource('types', TypeController::class);
         }
     );
