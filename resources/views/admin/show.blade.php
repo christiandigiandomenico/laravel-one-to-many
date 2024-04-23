@@ -5,6 +5,7 @@
     
     <div class="container py-5">
         <h1 class="mb-5">{{$project->name}}</h1>
+        <small>{{dump($project->type)}}</small>
     
         {{-- @dump($comic) --}}
 

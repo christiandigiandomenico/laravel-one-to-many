@@ -28,6 +28,7 @@ class StoreProjectRequest extends FormRequest
             'thumbnail' => 'nullable',
             'technologies' => 'required',
             'link' => 'required',
+            'type_id' => 'nullable|exists:types,id'
         ];
     }
 

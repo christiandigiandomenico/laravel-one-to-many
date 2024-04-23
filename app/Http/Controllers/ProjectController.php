@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Project;
 use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
+use App\Models\Type;
 use Illuminate\Support\Facades\Storage;
 
 class ProjectController extends Controller
@@ -26,6 +27,10 @@ class ProjectController extends Controller
     public function create()
     {
         return view('admin.create');
+
+        $types = Type::all();
+
+        return view('admin.projects.create', compact('types'));
     }
 
     /**
