@@ -54,6 +54,24 @@
             </div>
             @enderror
         </div>
+
+        <div class="mb-4">
+
+            <label for="type_id">Categoria</label>
+            
+            <select class="form-select" name="type_id" id="type_id">
+
+                <option value=""></option>
+                
+                @foreach ($types as $type)
+                <option value="{{$type->id}}" {{ $type->id == old('type_id', $project->category ? $project->category->id : '') ? 'selected' : '' }}>
+                    {{ $type->title }}
+                </option>
+                @endforeach
+
+            </select>
+
+        </div>
         
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
